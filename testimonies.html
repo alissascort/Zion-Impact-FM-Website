@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Testimonies - Zion Impact FM 100.1">
+    <title>Testimonies - Zion Impact FM 100.1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Zion Impact FM</span>
+                <span class="logo-freq">100.1</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="about.html#vision">Vision & Mission</a></li>
+                        <li><a href="about.html#leadership">Leadership</a></li>
+                    </ul>
+                </li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+                <li><a href="testimonies.html" class="nav-link">Testimonies</a></li>
+                <li><a href="bookings.html" class="nav-link">Bookings</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Listener Testimonies</h1>
+            <p>Stories of Faith and Transformation</p>
+        </div>
+    </section>
+
+    <!-- Submit Testimony Form -->
+    <section class="testimony-form-section">
+        <div class="container">
+            <h2>Share Your Testimony</h2>
+            <div class="form-container">
+                <form id="testimonyForm" class="testimony-form">
+                    <input type="text" id="testifyName" placeholder="Your Name" required>
+                    <input type="email" id="testifyEmail" placeholder="Your Email (Optional)">
+                    <input type="tel" id="testifyPhone" placeholder="Your Phone (Optional)">
+                    <textarea id="testifyContent" placeholder="Share your testimony here... (Minimum 50 characters)" required rows="8"></textarea>
+                    <label>
+                        <input type="checkbox" id="testifyAudio" name="allow-audio">
+                        I'd like to share an audio recording with my testimony
+                    </label>
+                    <div id="audioUploadSection" style="display:none;">
+                        <input type="file" id="testifyAudioFile" accept="audio/*" placeholder="Upload audio file (optional)">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Testimony</button>
+                </form>
+                <div id="testimonyMessage" class="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Published Testimonies -->
+    <section class="published-testimonies">
+        <div class="container">
+            <h2>Approved Testimonies</h2>
+            <div class="testimonies-grid" id="testimoniesGrid">
+                <div class="loading">Loading testimonies...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Zion Impact FM</h4>
+                    <p>100.1 FM - Seeking God to Impact Nations</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Phone: +254 701 234 567</p>
+                    <p>Email: info@zionimpactfm.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zion Impact FM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="pages.js"></script>
+</body>
+</html>

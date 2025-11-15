@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bookings & Advertising - Zion Impact FM 100.1">
+    <title>Bookings - Zion Impact FM 100.1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Zion Impact FM</span>
+                <span class="logo-freq">100.1</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="about.html#vision">Vision & Mission</a></li>
+                        <li><a href="about.html#leadership">Leadership</a></li>
+                    </ul>
+                </li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+                <li><a href="testimonies.html" class="nav-link">Testimonies</a></li>
+                <li><a href="bookings.html" class="nav-link">Bookings</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Bookings & Advertising</h1>
+            <p>Grow Your Business & Ministry with Zion Impact FM</p>
+        </div>
+    </section>
+
+    <!-- Booking Options -->
+    <section class="booking-options">
+        <div class="container">
+            <h2>Our Booking Services</h2>
+            <div class="options-grid">
+                <div class="option-card bounce-card">
+                    <h3>Business Advertisements</h3>
+                    <p>Reach thousands of listeners with your business message</p>
+                    <ul>
+                        <li>30-second spots</li>
+                        <li>Prime time slots available</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                </div>
+                <div class="option-card bounce-card">
+                    <h3>Preaching Sessions</h3>
+                    <p>Broadcast your sermon or teaching on air</p>
+                    <ul>
+                        <li>30 min to 2 hour slots</li>
+                        <li>Scheduled programming</li>
+                        <li>Wide audience reach</li>
+                    </ul>
+                </div>
+                <div class="option-card bounce-card">
+                    <h3>Special Announcements</h3>
+                    <p>Announce weddings, funerals, birthdays & events</p>
+                    <ul>
+                        <li>Short announcement slots</li>
+                        <li>Affordable pricing</li>
+                        <li>Quick turnaround</li>
+                    </ul>
+                </div>
+                <div class="option-card bounce-card">
+                    <h3>Sponsored Programs</h3>
+                    <p>Sponsor an entire radio program or show</p>
+                    <ul>
+                        <li>Full program sponsorship</li>
+                        <li>Branding opportunities</li>
+                        <li>Recurring slots</li>
+                    </ul>
+                </div>
+                <div class="option-card bounce-card">
+                    <h3>Music Promotion</h3>
+                    <p>Promote your gospel music to our listeners</p>
+                    <ul>
+                        <li>High rotation play</li>
+                        <li>Featured artist slots</li>
+                        <li>Social media promotion</li>
+                    </ul>
+                </div>
+                <div class="option-card bounce-card">
+                    <h3>Package Deals</h3>
+                    <p>Customized packages for your needs</p>
+                    <ul>
+                        <li>Combination services</li>
+                        <li>Volume discounts</li>
+                        <li>Flexible terms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form-section">
+        <div class="container">
+            <h2>Make a Booking</h2>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-row">
+                    <input type="text" id="bookingName" placeholder="Full Name" required>
+                    <input type="email" id="bookingEmail" placeholder="Email Address" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" id="bookingPhone" placeholder="Phone Number" required>
+                    <input type="text" id="bookingCompany" placeholder="Company/Organization">
+                </div>
+                <select id="bookingType" required>
+                    <option value="">-- Select Booking Type --</option>
+                    <option value="advertisement">Business Advertisement</option>
+                    <option value="preaching">Preaching Session</option>
+                    <option value="announcement">Special Announcement</option>
+                    <option value="sponsored">Sponsored Program</option>
+                    <option value="music">Music Promotion</option>
+                    <option value="custom">Custom Package</option>
+                </select>
+                <input type="date" id="bookingDate" placeholder="Preferred Date" required>
+                <div class="time-selector">
+                    <label>Preferred Time:</label>
+                    <select id="bookingTime" required>
+                        <option value="">-- Select Time Slot --</option>
+                        <option value="06:00-09:00">Morning (6:00 AM - 9:00 AM)</option>
+                        <option value="09:00-12:00">Mid-Morning (9:00 AM - 12:00 PM)</option>
+                        <option value="12:00-15:00">Afternoon (12:00 PM - 3:00 PM)</option>
+                        <option value="15:00-18:00">Evening (3:00 PM - 6:00 PM)</option>
+                        <option value="18:00-21:00">Night (6:00 PM - 9:00 PM)</option>
+                    </select>
+                </div>
+                <textarea id="bookingMessage" placeholder="Booking Details & Special Requests" rows="6" required></textarea>
+                <label>
+                    <input type="file" id="bookingFile" accept="audio/*,.pdf,.doc,.docx" placeholder="Upload script, audio, or document (optional)">
+                </label>
+                <label>
+                    <input type="checkbox" id="bookingAgree" required>
+                    I agree to the terms and conditions
+                </label>
+                <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+            </form>
+            <div id="bookingMessage" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Zion Impact FM</h4>
+                    <p>100.1 FM - Seeking God to Impact Nations</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Phone: +254 701 234 567</p>
+                    <p>Email: info@zionimpactfm.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zion Impact FM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="pages.js"></script>
+</body>
+</html>

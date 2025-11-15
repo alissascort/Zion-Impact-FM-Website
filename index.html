@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zion Impact FM 100.1 - Seeking God to Impact Nations">
+    <title>Zion Impact FM - Zion City Church</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+           <div class="logo">
+    <img src="logo.png" alt="Zion Impact FM" class="logo-image">
+</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Who We Are</a></li>
+                        <li><a href="about.html#vision">Vision & Mission</a></li>
+                        <li><a href="about.html#leadership">Leadership</a></li>
+                    </ul>
+                </li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+                <li><a href="testimonies.html" class="nav-link">Testimonies</a></li>
+                <li><a href="bookings.html" class="nav-link">Bookings</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+<!-- Hero Section with Video Background -->
+<section class="hero" id="hero">
+    <div class="hero-background">
+        <video class="video-background" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+            <source src="Zion.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <h1 class="hero-title">Zion Impact FM 100.1</h1>
+        <p class="hero-subtitle">Seeking God to Impact Nations</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" id="playLiveBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                Play Live
+            </button>
+            <a href="#sermons" class="btn btn-secondary">Sermons</a>
+            <a href="bookings.html" class="btn btn-secondary">Book Advertise</a>
+            <a href="donate.html" class="btn btn-secondary">Donate</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Live Player Mini (Hero) -->
+    <section class="live-player-section" id="livePlayer">
+        <div class="container">
+            <div class="player-card">
+                <div class="player-header">
+                    <div class="live-badge">
+                        <span class="live-dot"></span>
+                        LIVE
+                    </div>
+                    <h2>Now Playing</h2>
+                </div>
+                <div class="player-display">
+                    <img id="albumArt" src="album.jpg" alt="Album Art" class="album-art">
+                    <div class="player-info">
+                        <h3 id="songTitle">Connecting to Stream...</h3>
+                        <p id="songArtist">Zion Impact FM</p>
+                        <div class="player-meta">
+                            <span id="currentShow">Loading Program...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-controls-section">
+                    <button id="playPauseBtn" class="play-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                    <div class="player-progress">
+                        <span id="currentTime">0:00</span>
+                        <input type="range" id="progressBar" class="progress-bar" min="0" max="100" value="0">
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="volume-control">
+                        <input type="range" id="volumeControl" class="volume-slider" min="0" max="100" value="70">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Scripture -->
+    <section class="scripture-section">
+        <div class="container">
+            <div class="scripture-card">
+                <h3>Verse of the Day</h3>
+                <p id="scriptureText" class="scripture-text">"Trust in the LORD with all your heart and lean not on your own understanding." - Proverbs 3:5</p>
+                <p id="scriptureRef" class="scripture-ref">Proverbs 3:5</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Program Section -->
+    <section class="current-program">
+        <div class="container">
+            <h2>Currently On Air</h2>
+            <div class="program-card">
+                <img id="programImage" src="IMG_9269.JPG" alt="Host" class="program-image">
+                <div class="program-info">
+                    <h3 id="programName">Loading...</h3>
+                    <p id="programHost" class="program-host">Host: Loading...</p>
+                    <p id="programTime" class="program-time">Time: Loading...</p>
+                    <p id="programDesc" class="program-description">Loading program information...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermon Highlights -->
+    <section class="sermon-highlights" id="sermons">
+        <div class="container">
+            <h2>Latest Sermons</h2>
+            <div class="sermon-grid" id="sermonGrid">
+                <div class="loading">Loading sermons...</div>
+            </div>
+            <div class="center-button">
+                <a href="sermons.html" class="btn btn-primary">View All Sermons</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonies Slider -->
+    <section class="testimonies-section">
+        <div class="container">
+            <h2>Testimonies From Our Listeners</h2>
+            <div class="testimonies-slider">
+                <div class="testimony-card" id="testimonyCard">
+                    <p id="testimonyText">Loading testimony...</p>
+                    <p id="testimonyAuthor" class="testimony-author">- Waiting...</p>
+                </div>
+                <div class="slider-controls">
+                    <button id="prevTestimony" class="slider-btn">← Previous</button>
+                    <button id="nextTestimony" class="slider-btn">Next →</button>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="testimonies.html" class="btn btn-secondary">Share Your Testimony</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section (Short) -->
+    <section class="booking-preview">
+        <div class="container">
+            <h2>Grow Your Business & Ministry</h2>
+            <div class="booking-grid">
+                <div class="booking-card">
+                    <h3>Advertise With Us</h3>
+                    <p>Reach thousands of listeners across the region</p>
+                </div>
+                <div class="booking-card">
+                    <h3>Book Preaching Session</h3>
+                    <p>Schedule your sermon or teaching session on air</p>
+                </div>
+                <div class="booking-card">
+                    <h3>Special Announcements</h3>
+                    <p>Weddings, funerals, birthdays & community events</p>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="bookings.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events -->
+    <section class="news-events">
+        <div class="container">
+            <h2>News & Events</h2>
+            <div class="news-grid" id="newsGrid">
+                <div class="loading">Loading news...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section class="donate-section">
+        <div class="container">
+            <h2>Support Our Ministry</h2>
+            <div class="donate-content">
+                <div class="donate-info">
+                    <h3>Why Support Zion Impact FM?</h3>
+                    <p>Your generous donations help us:</p>
+                    <ul>
+                        <li>Keep broadcasting quality Christian content</li>
+                        <li>Support community outreach programs</li>
+                        <li>Reach more people with the Gospel message</li>
+                        <li>Maintain and upgrade our equipment</li>
+                    </ul>
+                </div>
+                <div class="donate-methods">
+                    <div class="donate-card">
+                        <h4>Mobile Money</h4>
+                        <p>M-Pesa: +254 7XX XXX XXX</p>
+                        <p>Airtel Money: +254 7XX XXX XXX</p>
+                        <p>Tigo Pesa: +254 7XX XXX XXX</p>
+                    </div>
+                    <div class="donate-card">
+                        <h4>Bank Details</h4>
+                        <p>Bank: Equity Bank</p>
+                        <p>Account: Zion City Church</p>
+                        <p>Account No: XXXXXXXX</p>
+                    </div>
+                    <div class="donate-card">
+                        <h4>Online Payment</h4>
+                        <a href="https://www.flutterwave.com" target="_blank" class="btn btn-small">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="donate.html" class="btn btn-primary">Learn More About Giving</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Feed -->
+    <section class="social-section">
+        <div class="container">
+            <h2>Follow Us On Social Media</h2>
+            <div class="social-links-large">
+                <a href="https://facebook.com/zionimpactfm" target="_blank" class="social-card facebook">
+                    <span>Facebook</span>
+                    <p>Join our community</p>
+                </a>
+                <a href="https://instagram.com/zionimpactfm" target="_blank" class="social-card instagram">
+                    <span>Instagram</span>
+                    <p>Daily inspirations</p>
+                </a>
+                <a href="https://youtube.com/zionimpactfm" target="_blank" class="social-card youtube">
+                    <span>YouTube</span>
+                    <p>Watch sermons</p>
+                </a>
+                <a href="https://tiktok.com/@zionimpactfm" target="_blank" class="social-card tiktok">
+                    <span>TikTok</span>
+                    <p>Short inspirations</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Zion Impact FM</h4>
+                    <p>100.1 FM - Seeking God to Impact Nations</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Phone: +254 701 234 567</p>
+                    <p>Email: info@zionimpactfm.com</p>
+                    <p>Address: Zion City Church, Nairobi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zion Impact FM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
